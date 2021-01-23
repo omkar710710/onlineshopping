@@ -19,7 +19,7 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<spring.version>4.3.13.RELEASE</spring.version>
-
+		<spring.security.version>4.2.2.RELEASE</spring.security.version>
 		<javaee.version>7.0</javaee.version>
 	</properties>
 
@@ -84,6 +84,15 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+<!-- Spring Web Flow -->
+		<!-- https://mvnrepository.com/artifact/org.springframework.webflow/spring-webflow -->
+<dependency>
+    <groupId>org.springframework.webflow</groupId>
+    <artifactId>spring-webflow</artifactId>
+    <version>2.4.4.RELEASE</version>
+</dependency>
+
+
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -91,6 +100,30 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
+		<!-- Spring security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		
+		
+		
+		
+		
+		
 	</dependencies>
 
 	<build>

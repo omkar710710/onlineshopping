@@ -18,7 +18,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf_header" content="${_csrf.headerName}">
 <title>Online Shopping-${title}</title>
 <script>
 	window.menu = '${title}';
@@ -74,13 +75,21 @@
 			</c:if>
 			
 			
-			<!-- load only when user clicks contact -->
+			<!-- load only when user clicks show Product -->
 			<c:if test="${userClickShowProduct==true}">
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
 			
+			<!-- load only when user clicks manage products -->
+			<c:if test="${userClickManageProducts==true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
 			
 			
+			<!-- load only when user clicks Cart -->
+			<c:if test="${userClickShowCart==true}">
+				<%@include file="cart.jsp"%>
+			</c:if>
 			
 		</div>
 		<!-- Footer -->
@@ -90,6 +99,9 @@
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
+		
+		<!-- jQuery Validator -->
+		<script src="${js}/jquery.validate.js"></script>
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
@@ -100,6 +112,8 @@
 		<!--  Datatable Bootstrap script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
 		
+		<!-- BootBox -->
+		<script src="${js}/bootbox.min.js"></script>
 		
 		<!-- Self coded Javascript -->
 		<script src="${js}/myapp.js"></script>
